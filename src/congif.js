@@ -1,5 +1,5 @@
 const config = {
-    beppath: process.env.BACKEND_PATH,
+    beppath: 'https://apimununuras.up.railway.app',
 }
 
 export default config;
