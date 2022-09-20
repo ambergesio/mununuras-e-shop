@@ -1,0 +1,316 @@
+.productos__seleccionados {
+    display: flex;
+        flex-direction: column;
+}
+
+.item {
+    opacity: 1;
+    margin-bottom: 7px;
+    padding: 1rem 0rem;
+    display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: .8em;
+        background-color: whitesmoke;
+    transition: all .3s;
+
+    @media only screen and (max-width: 768px) {
+        max-width: 340px;
+        flex-flow: row wrap;
+    }
+
+    &:hover {
+        border-radius: .8em;
+        box-shadow:  0 0 16px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+.item__imagen__descripcion {
+    padding: 1rem 0.2rem 1rem;
+    display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    transition: all .3s;
+
+    &>div {
+        display: grid;
+            place-content: center;
+        padding-left: 1.5rem;
+        height: 60px;
+        border-left: solid 1px $rojo;
+        &:first-of-type {
+            border:none;
+        }
+    }
+}
+.item__imagen {
+    img {
+        display: grid;
+        place-content: center;
+        margin-right: 1.5em;
+        height: 70px;
+        border-radius: 20%;
+        transition: all .3s;
+    
+        @media only screen and (max-width: 768px) {
+            height: 70px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.item__descripcion {
+
+    min-width: 340px;
+    @media only screen and (max-width: 910px) {
+        min-width: 200px;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        min-width: 130px;
+    }
+
+    & p {
+        margin-right: .7rem;
+        font-size: 1rem;
+        text-align: left;
+
+        @media only screen and (max-width: 800px) {
+            font-size: .9rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.importe__cantidad__subtotal__delete {
+    padding: 1rem .4rem;
+    display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    transition: all .3s;
+
+        @media only screen and (max-width: 768px) {
+            padding: 1rem;
+        }
+
+    &>div {
+        display: grid;
+            place-content: center;
+        padding: 1.5rem;
+        height: 60px;
+        border-left: solid 1px $rojo;
+
+        @media only screen and (max-width: 768px) {
+            &:first-of-type {
+                border: none;
+            }
+            &:nth-of-type(2) {
+                border: none;
+            }
+        } 
+    }
+    @media only screen and (max-width: 768px) {
+        display: flex;
+            flex-wrap: wrap;
+    }
+}
+
+.item__importe {
+
+    @media only screen and (min-width:768px){
+        min-width: 125px;
+    }
+
+    p {
+        padding: .4rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: $blanco;
+        background: $rojo;
+        border-radius: .8em;
+        
+        @media only screen and (max-width: 768px) {
+            width: 20em;
+        }
+    }
+}
+.item__cantidad {
+    width: 140px;
+    font-size: 1rem;
+
+    &>p {
+        font-size: 1.1rem;
+
+        @media only screen and (max-width: 576px) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.item__subtotal {
+    &>p {
+        font-size: 1.1rem;
+        color: $rojo;
+
+        @media only screen and (max-width: 576px) {
+            font-size: 1.4rem;
+
+        }
+    }
+    
+    span {
+        font-weight: bolder;
+    }
+}
+.item__delete img {
+    cursor: pointer;
+    margin-top: .2em;
+}
+.total {
+    border-top: dotted 1px $rojo;
+    margin: 0rem 4rem;
+    text-align: center;
+}
+.importe__total {
+    margin: 2rem;
+
+    p {
+        padding-bottom: 1em;
+        font-size: 2.1rem;
+        font-weight: bolder;
+        text-align: center;
+
+        @media only screen and (max-width: 576px) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.checkout {
+    padding: .8em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    color: $blanco;
+    background-color: $rojo;
+    border: solid 1px $rojo;
+    border-radius: .8em;
+    transition: all .3s;
+
+    &:hover {
+        color: $rojo;
+        background-color: $blanco;
+        border: solid 1px $rojo;
+        transform: scale(1.02, 1.02);
+
+        @media only screen and (max-width: 768px) {
+            color: $blanco;
+            background-color: $rojo;
+        }
+    }
+}
+.sin_items {
+    padding: .3em .7em;
+    font-family: 'mi_fuente', cursive;
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: $rojo;
+    text-decoration: none;
+    border-radius: 1em;
+    transition: .3s;
+    
+    &:hover {
+        text-decoration: none;
+        color: $blanco;
+        background-color: $rojo;
+        
+        @media only screen and (max-width:768px) {
+            color: $rojo;
+            background-color: transparent;
+        }
+    }
+}
+.sinstock_nohay {
+    padding: 1em 0em;
+    font-style: normal;
+    font-family: 'mi_fuente', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+    word-spacing: .2em;
+    color: $texto;
+    border-bottom: solid 1px $rojoscuro;
+
+    @media only screen and (max-width: 768px) {
+        max-width: 320px;
+        font-size: 1.6rem;
+        font-size: 2.2rem;
+    }
+}
+.cant_form input[type=number]{
+    padding-left: .7em;
+    height: 1.8rem;
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    color: $rojo;
+    background: $crema;
+    border: none;
+    border: solid 1px $marron;
+    border-radius: 10%;
+}
+.carro_font {
+    margin-top: -2rem;
+    margin-left: -.5rem;
+    padding: .2rem .6rem;
+    font-family: "carro";
+    font-size: .9rem;
+    border-radius: 50%;
+
+    @media only screen and (max-width: 768px){
+        font-size: 1.2rem;
+        padding: .3rem .75rem;
+
+    }
+}
+
+.aclara_cant {
+    display: flex;
+        flex-flow: row wrap;
+    margin-bottom: 20px;
+    padding: 0 8rem;
+
+    p {
+        font-size: .8rem;
+
+        @media only screen and (max-width:768px) {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.vaciar_carrito {
+    margin-top: 30px;
+    padding: 1rem 0rem;
+    display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: whitesmoke;
+    transition: .3s;
+
+    &>p {
+        margin-top: -10px;
+        padding: 0;
+        font-size: .9rem;
+    }
+}

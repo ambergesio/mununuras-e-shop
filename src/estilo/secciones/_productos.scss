@@ -1,0 +1,303 @@
+.ordenador {
+    margin: 1rem 2rem;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    select {
+        width: 200px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        color: $marron;
+        margin: .8em;
+        padding: .5em;
+        background-color: $marron;
+        border-radius: .4em;
+        background-color: $crema;
+        
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.prod_card {
+    position: relative;
+    display: flex;
+        justify-content: center;
+    margin: 2rem;
+    min-height: 670px;
+    width: 360px;
+    padding: 2.5rem;
+    border: $cremaoscuro 1px solid;
+    border-radius: 12px;
+    background-color: $crema;
+    transition: all .2s;
+    
+    &:hover {
+    transform: scale(1.01, 1.01);
+    -webkit-box-shadow: 0px 5px 36px 0px rgba(0, 0, 0, 0.22);
+            box-shadow: 0px 5px 36px 0px rgba(0, 0, 0, 0.22);
+    }
+
+    & img {
+        height: auto;
+        width:100%;
+        border: solid 2px $rojo;
+        border-radius: 12px;
+    }
+}
+
+.categorias {
+    margin-bottom: 1.8rem;
+    padding: .3rem 0;
+    font-size: .8rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    color: rgb(95, 95, 95);
+    text-align: center;
+    border-top: solid 1px lightgrey;
+    border-bottom: solid 1px lightgrey;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+}
+
+.prod_titulo {
+    padding-bottom: 20px;
+    font-family: 'mi_fuente', cursive;
+    font-size: 2.3rem;
+    font-weight: 900;
+    line-height: 1em;
+    text-align: center;
+    color: $rojoscuro;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 2.9em;
+    }
+}
+
+.prod_cantidad {
+    margin: 0 0 .8rem 0;
+    padding: 10px 0 18px 0;
+    display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        border-bottom: solid 1px rgb(228, 228, 228);
+}
+
+.prod_precio--stock {
+    margin: 1.2rem 0 .6rem 0;
+    padding: 10px 0;
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    border-top: solid 1px rgb(228, 228, 228);
+    border-bottom: solid 1px rgb(228, 228, 228);
+
+        @media only screen and (max-width: 768px) {
+            margin-top: 1rem;
+        }
+}
+
+.prod_precio {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: $mclaro;
+
+    span {
+        margin-right: .2rem;
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 2.6rem;
+    }
+}
+
+.prod_stock {
+    font-size: 12px;
+    text-align: center;
+
+    span {
+        font-size: 1.9rem;
+        font-weight: 500;
+        letter-spacing: -1px;
+    }
+}
+
+.producto_agregar_saber {
+    margin: .6rem 0;
+    display: flex;
+        justify-content: space-evenly;
+}
+
+.prod_agregaste {
+    margin-top: 1rem;
+    font-size: 15px;
+    text-align: center;
+}
+
+.description {
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+}
+
+.boton_cant {
+    width: 42px;
+    padding: .2em .4em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    color: whitesmoke;
+    background: $botonadd;
+    border-radius: 12px;
+    border: solid 1px $botonadd;
+    transition: all 0.3s;
+
+    &:hover {
+        background: $rojoscuro;
+        border: solid 1px $rojo;
+    }
+    &_disabled {
+        width: 42px;
+        padding: .2em .4em;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+        color: whitesmoke;
+        background: $botonadd;
+        border-radius: 12px;
+        border: solid 1px $botonadd;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: .6em
+    }
+}
+
+.item__cant {
+    padding: .6rem 1.3rem;
+    font-size: 1rem;
+    background-color: $crema;
+    border: solid 1px lightgrey;
+    border-radius: 12px;
+
+    @media only screen and (max-width: 768px){
+        padding: .8rem 1.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+.add {
+    padding: .5em 1.3em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: whitesmoke;
+    background: $rojo;
+    border-radius: 12px;
+    border: solid 1px $rojo;
+    transition: all 0.3s;
+    
+    &:hover {
+        background: $rojoscuro;
+        border: solid 1px $rojo;
+    }
+    &_disabled {
+        padding: .5em 1.3em;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: whitesmoke;
+        background: $marron;
+        border-radius: 12px;
+        border: solid 0px $rojo;
+        transition: all 0.3s;
+    }
+}
+
+.saber {
+    cursor: pointer;
+    width: 100%;
+    padding: .6em 1.5em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: $blanco;
+    background-color: $rojo;
+    border: solid 1px $rojo;
+    border-radius: .8em;
+    transition: 0.3s;
+
+    &:hover {
+        color: $rojo;
+        background-color: $rosa;
+        border: solid 1px $rojo;
+        transform: scale(1.02, 1.02);
+    }
+}
+
+.categorias_navlink {
+    font-family: 'roboto';
+    margin: .8rem;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    color: rgb(70, 70, 70);
+    text-align: center;
+    border-top: solid 1px lightgrey;
+    border-bottom: solid 1px lightgrey;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: $crema;
+        color: $marron;
+    }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+    &_bold {
+        color: black;
+        font-weight: 700;
+    }
+}
+.en_tu_carrito {
+    img {
+        padding: 7px;
+        position: absolute;
+        margin-top: -70px;
+        height: 45px;
+        width: auto;
+        border: none;
+        background-color: $rojoscuro;
+        border-radius: 50%;
+        border: solid 2px $rojo;
+    }
+}
+.busqueda {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    input[type=text] {
+        font-family: 'Roboto', sans-serif;
+        font-size: .9em;
+        color: $mclaro;
+        margin: .8em;
+        padding: .5em;
+        border: solid 2px $mlight;
+        border-radius: .4em;
+        max-width: 350px;
+        background-color: $marfil;
+    }
+}

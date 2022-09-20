@@ -1,0 +1,43 @@
+.nosotros__card {
+    margin: 9em 1em 1.2em;
+    padding: 2em;
+    min-height: 550px;
+    width: 350px;
+    border-radius: 1.5em;
+    background-color: $rojo;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    @media only screen and (max-width: 768px) {
+        width: 400px;
+    }
+}
+
+.nosotros__card--imagen {
+    margin-top: -9em;
+    height: 16em;
+    width: 16em;
+    border-radius: 50%;
+    border: solid 8px $rojo;
+}
+
+.nosotros__card--nombre {
+    padding-top: .7em;
+    font-family: 'mi_fuente';
+    font-size: 2.1em;
+    color: $blanco;
+}
+
+.nosotros__card--parrafo {
+    padding: 1.1em;
+    font-family: 'Roboto', cursive;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: $blanco;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.5rem;
+    }
+
+}

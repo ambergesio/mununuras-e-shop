@@ -1,0 +1,123 @@
+header {
+    position: relative;
+    border-top: solid 9px $rojo;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding: 1.2em 0;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    text-align: center;
+    background-color: $crema;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    z-index: 900;
+    transition: .3s;
+
+    .links {
+        padding: .4em 1em;
+        font-family: 'mi_fuente', cursive;
+        font-size: 1.5em;
+        font-weight: lighter;
+        color: $rojo;
+        text-decoration: none;
+        border-radius: 1em;
+        transition: .3s;
+
+        @media only screen and (max-width:756px) {
+            font-size: 2em;
+        }
+    }
+
+    .links:hover {
+        text-decoration: none;
+        font-size: 1.5em;
+        color: $blanco;
+        background-color: $rojo;
+
+        @media only screen and (max-width:756px) {
+            font-size: 2em;
+            color: $rojo;
+            background-color: $crema;
+        }
+    }
+
+    &>.links:hover {
+        background-color: $crema;
+    }
+
+    .monto {
+        color: $crema;
+        background-color: $marron;
+        transition: .3s;
+    }
+
+    .ventanaModal {
+        display: grid;
+            place-content: center;
+        position: absolute;
+        top: 20%;
+        right: 1%;
+        min-width: 350px;
+        padding: 1.5rem;
+        font-size: 1rem;
+        text-align: center;
+        color: $crema;
+        border-radius: 8px;
+        border: solid 1px $crema;
+        background-color: $rojo;
+        transition: all .25s;
+
+        p {
+            color: $crema;
+            font-size: 1rem;
+
+            @media only screen and (max-width: 768px){
+                font-size: 1.4rem;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            top: 60px;
+            padding: 2.5rem;
+            font-size: 1.3rem;
+        }
+    }
+}
+.unDo {
+    cursor: pointer;
+    font-size: 1rem;;
+    border: none;
+    background: none;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.4rem;
+    }
+}
+
+.unDocerrar {
+    position: absolute;
+    cursor: pointer;
+    top: 4px;
+    right: 4px;
+    padding: .1rem .3rem;
+    font-size: .8rem;;
+    border: none;
+    border-radius: 30%;
+    background-color: $marron;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+}
+nav>a:nth-of-type(2) {
+    @media only screen and (max-width: 576px){
+        display: none;
+    }
+}
+nav>a:nth-of-type(3) {
+    @media only screen and (max-width: 576px){
+        display: none;
+    }
+}

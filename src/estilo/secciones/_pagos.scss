@@ -1,0 +1,54 @@
+.titulo {
+    padding-bottom: 20px;
+    font-family: 'mi_fuente', cursive;
+    font-size: 2.2rem;
+    line-height: 1.1em;
+    text-align: left;
+    color: $mclaro;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 2.8em;
+        text-align: center;
+    }
+}
+
+.texto {
+    color: $marron;
+    font-size: 1.1rem;
+    
+    @media only screen and (max-width: 768px){
+        font-size: 1.4rem;
+    }
+}
+
+.boton_pagos {
+    cursor: pointer;
+    width: 100%;
+    margin: .9rem;
+    padding: .5em 1.3em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: whitesmoke;
+    background: $rojo;
+    border-radius: 12px;
+    border: solid 1px $rojo;
+    transition: all 0.3s;
+    
+    &:hover {
+        background: $rojoscuro;
+        border: solid 1px $rojo;
+        transform: scale(1.02, 1.02);
+    }
+    &_disabled {
+        width: 100%;
+        padding: .5em 1.3em;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: whitesmoke;
+        background: $marron;
+        border-radius: 12px;
+        border: solid 0px $rojo;
+        transition: all 0.3s;
+    }
+}

@@ -1,0 +1,44 @@
+.inicio__parrafo {
+    height: 400px;
+    max-width: 460px;
+
+    @media only screen and (max-width: 756px) {
+        max-width: 400px;
+    }
+
+    &>h1 {
+        @media only screen and (max-width: 375px) {
+            font-size: 2.1rem;
+
+            span {
+                font-size: 2.8rem;
+            }
+        }
+    }
+
+    p {
+        font-size: 1.5rem;
+
+        @media only screen and (max-width: 756px) {
+            font-size: 1.9rem;
+            line-height: 1.4em;
+        }
+        @media only screen and (max-width: 375px) {
+            font-size: 1.7rem;
+            line-height: 1.4em;
+        }
+    }
+}
+
+.inicio__imagen {
+    padding: 6em 1em;
+
+    @media only screen and (max-width: 375px) {
+        padding: 3em 1em;
+    }
+
+    &--tamanio {
+        height: 27em;
+    }
+
+}

@@ -1,0 +1,53 @@
+.slider {
+    position: relative;
+}
+    
+.image_slider {
+    height: auto;
+    width: 570px;
+    border: solid 2px $rojo;
+    border-radius: 12px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    @media only screen and (max-width: 768px){
+        width: 350px;
+    }
+    @media only screen and (max-width: 375px){
+        width: 250px;
+    }
+}
+
+.flecha_der {
+    cursor: pointer;
+    z-index: 90;
+    right: 10px;
+    top: 45%;
+    position: absolute;
+    height: 45px;
+    opacity: .7;
+}
+
+.flecha_izq {
+    cursor: pointer;
+    z-index: 90;
+    left: 10px;
+    top: 45%;
+    position: absolute;
+    height: 45px;
+    opacity: .7;
+}
+
+.slide {
+    opacity: 0;
+    transition: .4s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transition:all .4s ease;
+}
+.off {
+    opacity: 0;
+}

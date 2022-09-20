@@ -1,0 +1,93 @@
+.contacto__formulario {
+    display: flex;
+        flex-direction: column;
+    padding: 3em;
+    width: 400px;
+    background-color: $crema;
+    border-radius: 1em;
+
+    @media only screen and (max-width: 375px) {
+        padding: 1em;
+        width: 210px;
+    }
+
+    input[type=text],
+    input[type=email],
+    textarea,
+    select {
+        font-family: 'Roboto', sans-serif;
+        font-size: .9em;
+        color: $mclaro;
+        margin: .8em;
+        padding: .5em;
+        border: solid 2px $mlight;
+        border-radius: .4em;
+        max-width: 350px;
+        background-color: $marfil;
+
+        @media only screen and (max-width: 768px) { 
+            font-size: 1.5em;
+        }
+        @media only screen and (max-width: 375px) { 
+            font-size: 1.3em;
+        }
+    }
+    
+    select {
+        color: $blanco;
+        background-color: $mclaro;
+    }
+    select:focus {
+        outline: none;
+    }
+    
+    input[type=submit] {
+        margin: .8em;
+        padding: .7em .5em;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: $blanco;
+        background: $rojo;
+        border-radius: .8em;
+        border: solid 1px $rojo;
+
+        &:hover {
+            background: $rojoscuro;
+            border: solid 1px $rojo;
+
+            @media only screen and (max-width: 768px) {
+                font-weight: normal;
+                color: $blanco;
+                background: $rojo;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            padding: .6em .5em;
+            font-size: 2em;
+        }
+        @media only screen and (max-width: 375px) {
+            padding: .6em .5em;
+            font-size: 1.5em;
+        }
+    }
+}
+
+
+.contacto__imagen {
+    height: 500px;
+    margin: 6em 1em;
+
+    @media only screen and (max-width: 1024px) {
+        height: 400px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        height: 300px;
+    }
+    @media only screen and (max-width: 375px) {
+        height: 250px;
+        margin: 5em 1em;
+    }
+}

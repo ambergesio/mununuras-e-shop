@@ -1,0 +1,251 @@
+.productos {
+    display: flex;
+        justify-content: center;
+
+    &__item {
+        display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+        padding: .9em;
+        width: 500px;
+        transition: 0.3s;
+        cursor: default;
+
+
+        @media only screen and (max-width: 768px) {
+            margin: .5em;
+            padding: 3em;
+            display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+            width: 320px;
+        }
+        
+        &:hover {
+            background-color: whitesmoke;
+            border-radius: .8em;
+            transition: .3s;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        img {
+            height: 170px;
+            border-radius: 50%;
+            border: solid 3px $rojo;
+
+            @media only screen and (max-width: 768px) {
+                    height: 140px;
+                    border-radius: 50%;
+            }
+
+        }
+        &--descripcion {
+            padding-left: 1.5em;
+            text-align: left;
+
+            @media only screen and (max-width: 768px) {
+                text-align: center;
+            }
+
+            p {
+                padding-bottom: 1em;
+                font-family: 'Roboto', cursive;
+                text-align: justify;
+                font-size: 1em;
+                line-height: 1.3em;
+                color: $texto;
+
+                @media only screen and (max-width: 768px) {
+                    font-size: 1.4em;
+                }
+            }
+        }
+    }
+
+}
+
+.productos__item--descripcion--botones {
+    display: flex;
+        justify-content: space-between;
+}
+
+.agregar {
+    cursor: pointer;
+    padding: .6em;
+    font-family: 'Roboto', sans-serif;
+    font-size: .8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $blanco;
+    background: $rojo;
+    border: solid 1px $rojo;
+    border-radius: .8em;
+    transition: 0.3s;
+
+    @media only screen and (max-width: 768px) {
+        padding: .9em;
+        font-size: 1em;
+    }
+
+    &:hover {
+        color: $crema;
+        background-color: $marron;
+        border: solid 1px $marron;
+    }
+}
+
+
+#item_agregado_show {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    display: flex;
+        justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#item_agregado {
+    padding: 3.5rem;
+    position: fixed;
+    top: 35%;
+    z-index: 999999;
+    max-width: 400px;
+    background-color: $crema;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+
+    p {
+        font-family: 'mi_fuente';
+        font-size: 1.6rem;
+        color: $marron;
+        text-align: center;
+        font-weight: 200;
+
+        @media only screen and (max-width: 756px) {
+            font-size: 2rem;
+        }
+
+        strong {
+            font-size: 2rem;
+            color: $rojo;
+
+            @media only screen and (max-width: 756px) {
+                font-size: 2.7rem;
+            }
+        }
+    }
+}
+.cerrar_cartelito {
+    position: absolute;
+    top: -5px;
+    right:5px;
+    margin-top: 10px;
+    padding: 3px 8px;
+    cursor: pointer;
+    font-family: 'Roboto', cursive;
+	font-size: 1.2rem;
+    color: $crema;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+    background-color: $rojo;
+	border-radius: 50%;
+    border: none;
+
+    @media only screen and (max-width: 768px) {
+        padding: 4.5px 8px;
+    }
+
+    &:hover {
+        background-color: $rojoscuro;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .descripcion>p {
+        font-family: 'Roboto', cursive;
+        text-align: left;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        color: $texto;
+    }
+}
+.especificaciones_de_compra_cont {
+    margin: 5rem .8rem;
+    display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+    
+    @media only screen and (max-width:768px) {
+        display: flex;
+            flex-flow: column wrap;
+        transition: .3s;
+    }
+
+}
+.especificaciones_de_compra {
+    border-bottom: solid 1px $rojoscuro;
+    margin: 1.9rem;
+    padding-bottom: 1rem;
+    display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items:stretch ;
+        transition: .3s;
+
+    @media only screen and (max-width:768px) {
+        display: grid;
+            place-content: center;
+        text-align: center;
+        border-bottom: none;
+        transition: .3s;
+    }
+    
+    p {
+        margin-left: 1em;
+        font-family: "Roboto";
+        font-size: .8rem;
+        text-align: left;
+        color: $mpopcion;
+
+        @media only screen and (max-width:768px) {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        strong {
+            font-size: 1rem;
+            font-weight: 900;
+
+            @media only screen and (max-width:768px) {
+                font-size: 1.6rem;
+                text-align: center;
+            }
+        }
+
+    }
+}
+.item_esp {
+    padding: 6px;
+}
+.aclara_t {
+    font-family: "roboto";
+    font-size: .9rem;
+    font-weight: 100;
+    color: $mpopcion;
+}
+.borde_top {
+    @media only screen and (max-width:768px) {
+        padding-top: 6rem;
+    }
+}
+.borde_top_tienda {
+    @media only screen and (max-width:768px) {
+        padding-top: 6rem;
+        border-top: solid 1px $mpopcion;
+    }
+}

@@ -1,0 +1,259 @@
+.prod_card_detail_container {
+    display: grid;
+        place-content: center;
+    
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+.prod_card_detail {
+    display: flex;
+        flex-flow: row wrap;    
+        justify-content: center;
+        align-items: center;
+    margin: 2rem;
+    padding: 2.5rem;
+    border: $cremaoscuro 1px solid;
+    border-radius: 12px;
+    background-color: $crema;
+
+    @media only screen and (max-width: 768px) {
+        max-width: 550px;
+    }
+}
+
+.prod_card_detail-img {
+    text-align: center;
+    margin: 1rem;
+    min-width: 350px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    height: auto;
+    border-radius: 12px;
+
+}
+
+.prod_card_detail--elemnts {
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+    padding: 1rem 2.5rem;
+    max-width: 380px;
+}
+
+.categorias_detail {
+    font-size: .8rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    color: rgb(95, 95, 95);
+    text-align: center;
+    border-top: solid 1px lightgrey;
+    border-bottom: solid 1px lightgrey;
+    margin-bottom: 1.2rem;
+    padding: .3rem 0;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+}
+
+
+.prod_titulo_detail {
+    margin-top:.6rem;
+    padding-bottom: 20px;
+    font-family: 'mi_fuente', cursive;
+    font-size: 2.6rem;
+    font-weight: 900;
+    line-height: 1em;
+    text-align: center;
+    color: $rojoscuro;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 4em;
+    }
+}
+
+.description_detail {
+    font-size: 1rem;
+    text-align: justify;
+    //margin-bottom: 1rem;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.4rem;
+    }
+}
+
+.prod_cantidad_detail {
+    margin: 1.5rem 0;
+    display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+}
+
+.item__cant_detail {
+    padding: .4rem 1.3rem;
+    font-size: 1.2rem;
+    background-color: $crema;
+    border: solid 1px lightgrey;
+    border-radius: 12px;
+
+    @media only screen and (max-width: 768px) {
+        padding: .8rem 1.3rem;
+    }
+}
+
+
+.prod_precio--stock_detail {
+    margin: .6rem 0;
+    padding: .6rem 0;
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    border-top: solid 1px lightgrey;
+    border-bottom: solid 1px lightgrey;
+
+        @media only screen and (max-width: 768px) {
+            margin-top: 1rem;
+        }
+}
+
+.prod_precio_detail {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: $mclaro;
+
+    span {
+        margin-right: .2rem;
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 2.6rem;
+    }
+}
+
+
+.prod_stock_detail {
+    font-size: 12px;
+    text-align: center;
+
+    span {
+        font-size: 1.9rem;
+        font-weight: 500;
+        letter-spacing: -1px;
+    }
+}
+
+.prod_agregaste_detail {
+    height: 1px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+.producto_agregar_saber_detail {
+    margin: .6rem 0;
+    display: flex;
+        justify-content: space-evenly;
+}
+
+.boton_cant_detail {
+    width: 40px;
+    padding: .2em .4em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    color: whitesmoke;
+    background: $botonadd;
+    border-radius: 12px;
+    border: solid 1px $botonadd;
+    transition: all 0.3s;
+
+    &:hover {
+        background: $rojoscuro;
+        border: solid 1px $rojo;
+        transform: scale(1.09, 1.09);
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: .5em
+    }
+}
+
+.add_detail {
+    cursor: pointer;
+    width: 100%;
+    padding: .5em 1.3em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: whitesmoke;
+    background: $rojo;
+    border-radius: 12px;
+    border: solid 1px $rojo;
+    transition: all 0.3s;
+    
+    &:hover {
+        background: $rojoscuro;
+        border: solid 1px $rojo;
+        transform: scale(1.02, 1.02);
+    }
+    &_disabled {
+        width: 100%;
+        padding: .5em 1.3em;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: whitesmoke;
+        background: $marron;
+        border-radius: 12px;
+        border: solid 0px $rojo;
+        transition: all 0.3s;
+    }
+}
+
+.volveralatienda {
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.2rem;
+    padding: .5em 1.3em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-align: center;
+    color: $rojo;
+    background: $crema;
+    border-radius: 12px;
+    border: solid 1px $rojo;
+    transition: all 0.3s;
+    
+    &:hover {
+        color: $crema;
+        background: $rojoscuro;
+        border: solid 1px $rojo;
+        transform: scale(1.02, 1.02);
+    }
+}
+
+.nosiste {
+    text-align: center;
+
+    &__boton {
+        text-align: center;
+        margin: 1.8em;
+        padding: .7em 1em;
+        font-family: "mi_fuente"; 
+        font-size: 1.4rem;
+        color: $blanco;
+        background-color: $rojo;
+        border-radius: 1.3em;
+        transition: all .3s;
+        
+        &:hover {
+            background-color: $marron;
+            transform: scale(1.03, 1.03);
+        }
+    }
+}

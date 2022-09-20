@@ -1,0 +1,240 @@
+@import '../../estilo//variables/variables';
+
+.chat_content {
+    // margin: .6rem;
+    padding: .8rem;
+    height: 390px;
+    width: 360px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+    // border: solid 1px $rojo;
+    transition: all .4s;
+}
+
+
+.user {
+    margin-bottom: 6px;
+    display: flex;
+    flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+}
+
+.userActive {
+    margin-bottom: 6px;
+    display: flex;
+    flex-flow: column nowrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+}
+
+
+.avatarautorfecha {
+    margin-bottom: 10px;
+    display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+}
+
+.avatarautorfechaActive {
+    margin-bottom: 10px;
+    display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+}
+
+.avatarimg {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+}
+
+.autorfecha {
+    display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+}
+
+.autorfechaActive {
+    display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+}
+
+.autor {
+    margin-right: 6px;
+}
+
+
+p {
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: black;
+}
+
+.sendMessage {
+    width: 100%;
+    height: 3rem;
+    margin: 2rem 0;
+    display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+}
+
+.inp_field_chat {
+    width: 100%;
+    height: 2.2rem;
+    padding: .6rem;
+    font-family: 'Roboto';
+    color: rgb(16, 22, 78);
+    font-size: .9rem;
+    border: none;
+    border-radius: .4rem;
+    /* background-color:  #fcf4eb; */
+    @media only screen and (max-width: 768px){
+        font-size: 1.6rem;
+    }
+}
+
+.enviar {
+    cursor: pointer;
+    padding: .6rem .8rem;
+    font-size: .9rem;
+    color: white;
+    border: none;
+    border-radius: .8rem;
+    // background-color: rgb(0, 80, 172);
+    background-color: $rojo;
+    transition: all .3s;
+}
+.enviar:hover {
+    background-color: $rojoscuro;
+}
+
+
+// th {
+//     padding: 0.6rem 1.1rem;
+//     font-family: 'Roboto';
+//     font-size: 1rem;
+//     font-weight: 100;
+//     text-align: left;
+//     color: white;
+//     background-color: rgb(63, 63, 63);
+//     border-radius: .4rem;
+// }
+// .bold {
+//     font-size: 1.2rem;
+//     font-weight: 900;
+//     background-color: black;
+// }
+
+
+.autor>p {
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    color: rgb(51, 51, 51);
+}
+
+.fecha>p {
+    font-family: 'Roboto';
+    font-size: 13px;
+    text-align: left;
+    color: rgb(121, 48, 0);
+}
+
+.fechaActive>p {
+    font-family: 'Roboto';
+    font-size: 13px;
+    text-align: right;
+    color: rgb(121, 48, 0);
+}
+
+.autorActive>p {
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+    color: rgb(51, 51, 51);
+}
+
+.cont_msj {
+    position: relative;
+    padding: 12px;
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 80%;
+    height: fit-content;
+    color: white;
+    background-color: #a5a4a4;
+    // background-color: rgb(10, 104, 245);
+    border-radius: 15px;
+
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: -14px;
+        left: 8px;
+        height: 20px;
+        width: 20px;
+        // clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        clip-path: polygon(38% 0, 37% 14%, 39% 28%, 42% 40%, 45% 51%, 52% 64%, 60% 77%, 73% 89%, 87% 100%, 17% 100%, 12% 86%, 10% 72%, 10% 57%, 13% 39%, 18% 25%, 26% 12%);
+        background-color: #a5a4a4;
+    }
+    
+    @media only screen and (max-width: 576px){
+        font-size: 1.9rem;
+    }
+}
+
+.cont_msjActive {
+    position: relative;
+    padding: 12px;
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+    font-weight: 400;
+    // width: 90%;
+    color: white;
+    background-color: #0084ff;
+    /* background-color: #ef4058; */
+    /* background-color: rgb(10, 104, 245); */
+    border-radius: 15px;
+
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: -16px;
+        right: 14px;
+        height: 20px;
+        width: 20px;
+        // clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        clip-path: polygon(64% 1%, 73% 10%, 81% 22%, 86% 33%, 90% 43%, 93% 56%, 93% 71%, 92% 85%, 87% 100%, 15% 100%, 29% 86%, 41% 74%, 51% 61%, 59% 47%, 63% 31%, 65% 16%);
+        background-color: #0084ff;
+    }
+    
+    @media only screen and (max-width: 576px){
+        font-size: 1.9rem;
+    }
+}
+
+.globotxt {
+    color: white;
+    font-weight: 300;
+    word-wrap: break-word;
+    max-width: 300px;
+}
+
+.sendMessage {
+    margin: .6rem 0;
+}

@@ -1,0 +1,111 @@
+footer {
+    padding: 4em;
+    background-image: linear-gradient(to bottom, $mclaro, $marron);
+    transition: .3s;
+}
+
+.footer__logos {
+    display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+}
+
+legend {
+    padding: 1em 0em;
+    font-style: normal;
+    font-family: 'mi_fuente', cursive;
+    font-size: 1.4rem;
+    word-spacing: .2em;
+    color: $blanco;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+}
+
+.seguinos {
+    padding: 1em 0em;
+    font-style: normal;
+    font-family: 'mi_fuente', cursive;
+    font-size: 1.4em;
+    word-spacing: .2em;
+    color: $blanco;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+}
+
+.footer__formulario {
+    max-width: 355px;
+    text-align: left;
+
+    @media only screen and (max-width: 920px) {    
+        text-align: center;
+    }
+
+    &--campos input[type=text],
+    &--campos input[type=email] {
+        margin-top: 1em;
+        padding: .7em 1em;
+        width: 90%;
+        font-family: 'Roboto', sans-serif;
+        font-size: .9em;
+        color: $blanco;
+        background: none;
+        border: none;
+        border-bottom: 1px solid $blanco;
+
+        @media only screen and (max-width: 768px) {    
+            width: 80%;
+            font-size: 1.2em;
+        }
+    }
+    
+    &--campos input[type=submit] {
+        margin-top: 2.8em;
+        padding: .9em 1em;
+        font-family: 'Roboto', sans-serif;
+        font-size: .9em;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: $blanco;
+        border: solid 1px $rojo;
+        background: $rojo;
+        border-radius: .8em;
+
+        @media only screen and (max-width: 576px) {
+            font-size: 1.3em;
+        }
+
+        &:hover {
+            border: solid 1px $rojo;
+            background: $rojoscuro;
+
+            @media only screen and (max-width: 576px) {
+                color: $blanco;
+                background-color: $rojo;
+                border: solid 1px $rojo;
+            }
+        }
+    }
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.datos {
+    padding: 1em 0em;
+    font-family: 'Roboto', cursive;
+    font-style: normal;
+    font-size: .8em;
+    word-spacing: .2em;
+    text-align: center;
+    color: $blanco;
+
+    @media only screen and (max-width: 576px) {
+        font-size: 1.2em;
+    }
+}

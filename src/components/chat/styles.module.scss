@@ -1,0 +1,191 @@
+@import '../../estilo/variables/variables';
+
+@keyframes advise {
+      0% { transform: scale(1); }
+      2% { transform: scale(1.02); }
+      4% { transform: scale(1.04); }
+      6% { transform: scale(1.06); }
+      8% { transform: scale(1.04); }
+     10% { transform: scale(1.02); }
+     12% { transform: scale(1); }
+     16% { transform: scale(1.02); }
+     18% { transform: scale(1.04); }
+     20% { transform: scale(1.06); }
+     22% { transform: scale(1.04); }
+     24% { transform: scale(1.02); }
+     26% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+.chat_icon {
+    cursor:pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: 80px;
+    width: 80px;
+
+    filter: drop-shadow(2px 4px 8px rgb(0,0,0,0.7));
+}
+
+.chat_icon_alarm {
+    cursor:pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: 80px;
+    width: 80px;
+    filter: drop-shadow(2px 4px 8px rgb(0,0,0,0.7));
+    animation: advise 2s infinite ease-in-out;
+}
+
+.chat {
+    visibility: hidden;
+    position: fixed;
+    opacity: 0;
+    bottom: 100px;
+    right: 0;
+    height: 520px;
+    width: 390px;
+
+    margin: 1rem;
+    padding: 1rem;
+
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    border-radius: 1rem;
+    background-color: $crema;
+    -webkit-box-shadow: 0px 5px 36px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: 0px 5px 36px 0px rgba(0, 0, 0, 0.22);
+
+    transition: all .4s;
+}
+
+.open_chat {
+    visibility: visible;
+    position: fixed;
+    opacity: 1;
+    bottom: 100px;
+    right: 0;
+    height: 520px;
+    width: 390px;
+
+    margin: 1rem;
+    padding: 1rem;
+
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    border-radius: 1rem;
+    background-color: $crema;
+    -webkit-box-shadow: 0px 5px 36px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: 0px 5px 36px 0px rgba(0, 0, 0, 0.22);
+
+    transition: all .4s;
+
+}
+
+.chatCounter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    height: 25px;
+    text-align: center;
+    width: 25px;
+    background-color: black;
+    border: solid 1px white;
+    border-radius: 50%;
+
+    display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center ;
+}
+
+.header {
+    display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center ;
+        gap: 12px;
+}
+
+.title {
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $rojoscuro;
+    
+    &>span {
+        color: $rojo;
+    }
+}
+
+.expand {
+    height: 25px;
+    width: 25px;
+    border: none;
+
+    font-size: 16px;
+    text-align: center;
+    color: $blanco;
+    border-radius: .4rem;
+    background-color: $rojo;
+}
+
+
+.chat_title {
+    padding: 0 22px;
+    font-family: 'mi_fuente', cursive;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 30px;
+    text-align: center;
+    color: $rojoscuro;
+}
+
+.login {
+    padding: 32px;
+    width: 100%;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+}
+
+.inp_field_login {
+    width: 100%;
+    height: 36px;
+    padding: 10px;
+    font-family: 'Roboto';
+    color: rgb(16, 22, 78);
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+}
+
+.submit_login {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    // background-color: rgb(0, 80, 172);
+    background-color: $rojo;
+    transition: all .3s;
+}
+
+.enviar:hover {
+    background-color: $rojoscuro;
+}
