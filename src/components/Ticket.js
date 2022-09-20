@@ -84,7 +84,7 @@ const Ticket = ({consulta, modal, setModal, idCompra, idDeLaCompra, itemsComprad
                         <div className="terminada">
                             <p>Tus datos:</p>{ <DatosComprador nombre={nombre} apellido={apellido} email={email} area={area} telefono={telefono} calle={calle} numero={numero} cp={cp} documento={documento} />}
                         </div>
-                        <form action={`${config.bepath}/mp/checkout`} method="post">
+                        <form action={`${config.beppath}/mp/checkout`} method="post">
                             <input type="hidden" name="preferencia" value={JSON.stringify(preferencia)} />
                             <input type="hidden" name="payer" value={JSON.stringify(payer)} />
                             <button type="submit" className="checkout" >Terminar la compra</button>
