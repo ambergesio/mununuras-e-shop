@@ -1,6 +1,5 @@
 const config = {
-    beppath: 'https://munuback.herokuapp.com',
-    bepath: 'http://localhost:5001'
+    beppath: process.env.BACKEND_PATH,
 }
 
 export default config;
