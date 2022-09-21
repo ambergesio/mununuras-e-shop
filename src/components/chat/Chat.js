@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import io from 'socket.io-client';
-import config from '../../congif';
+import config from '../../config';
 import ConnectedChat from './ConnectedChat';
 import CartContext from '../../context/CartContext';
 import { LogInUser } from '../../services/apiResources';
@@ -17,7 +17,7 @@ const Chat = () => {
 
 
     useEffect(() => {
-        const newSocket = io(config.bepath, {
+        const newSocket = io(config.beppath, {
             transports: ['websocket'],
             upgrade: false,
         });

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ItemsCompradosList from "./ItemsCompradosList";
 import DatosComprador from "./DatosComprador";
 import { deleteOrder } from "../services/apiResources";
-import config from '../congif';
+import config from '../config';
 
 const Ticket = ({consulta, modal, setModal, idCompra, idDeLaCompra, itemsComprados, precioTotal, preferencia, payer, nombre, apellido, email, area, telefono, calle, numero, cp, documento}) => {
         

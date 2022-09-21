@@ -1,4 +1,4 @@
-import config from '../congif';
+import config from '../config';
 const prodsPath = 'api/productos';
 const ordersPath = 'api/ordenes';
 const loginPath = 'login'

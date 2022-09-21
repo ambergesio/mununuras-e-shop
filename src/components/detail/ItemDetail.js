@@ -5,7 +5,6 @@ import React, { useState, useEffect, useContext } from "react";
 import CartContext from "../../context/CartContext";
 import ImageSlider from './ImageSlider';
 import ItemCategory from "../ItemCategory";
-// import config from '../../congif';
 
 
 const ItemDetail = ({producto}) => {
