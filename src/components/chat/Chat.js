@@ -67,11 +67,11 @@ const Chat = () => {
             :
             <>
                 <div  className={styles.chat_title}>
-                    Ingresa al chat con tu cuenta de mununuras
+                    Ingresa al chat de mununuras con el siguiente usuario de prueba:
                 </div>
                 <form className={styles.login} onSubmit={handleSubmit}>
-                    <input className={styles.inp_field_login} name="email" type="text" placeholder="email"/>
-                    <input className={styles.inp_field_login} name="password" type="password" placeholder="contraseña"/>
+                    <input className={styles.inp_field_login} name="email" type="text" placeholder="user@test.com"/>
+                    <input className={styles.inp_field_login} name="password" type="password" placeholder="Test1234"/>
                     <button className={styles.submit_login} type="submit">
                         iniciar sesión
                     </button>
